@@ -41,6 +41,7 @@ export class IssuesController {
 
   @Delete(':id')
   deleteById(@Param('id') id: string): void {
+    console.log(`issue id to delete: ${id}`);
     return this.issuesService.delete(id);
   }
 }
